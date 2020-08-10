@@ -5,4 +5,4 @@ url = './titanic.csv'
 # Load data
 dataframe = pd.read_csv(url)
 # Show top ten rows where column 'sex' is 'male'
-dataframe[dataframe['Sex'] == 'male'].head(10)
+dataframe[(dataframe['Sex'] == 'male') & (dataframe['Age'] >= 60)].head(10)
